@@ -1,6 +1,6 @@
 # 05 Auxillery Systems
 
-Now we can run MOOSE, but often times in science we need more meaningful result or more fine control to the problem statement than just solving for "core" variables. MOOSE has ways of handling such with the use of `AuxVariables` and `AuxKernels`. These serves to perform calculations on top of `Variables` and `Kernels` block, perform modifications with respects to non-linear variables.
+Now we can run MOOSE, but often times in science we need more meaningful result or more fine control to the problem than just solving for "core" variables. MOOSE has ways of handling such with the use of `AuxVariables` and `AuxKernels`. These serves to perform calculations on top of `Variables` and `Kernels` block, perform modifications with respects to non-linear variables.
 
 For example, we want to compute the flux of the diffusion equation, and a AuxVar/Kernels combinations is the perfect way. The flux is represented using the following:
 
@@ -39,6 +39,6 @@ Lastly, we need to state the `thermal_conductivity` in the Material Block:
     []
 
 
-We can then visualize our z-flux component in our output file after running.
+We can then visualize our z-flux component in our output file after running. The files is `05_Aux.i`
 
 ![outputs_05](media/05_flux_z.png)
