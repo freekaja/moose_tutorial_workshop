@@ -61,14 +61,11 @@ In this step, we can setup the simplest inputs file for MOOSE to get running. Ev
       []
     []
 
-
 ##### [Executioner] - Define solver
 
     [Executioner]
       type = Steady       # Steady state problem
       solve_type = NEWTON # Perform a Newton solve, uses AD to compute Jacobian terms
-      petsc_options_iname = '-pc_type -pc_hypre_type' # PETSc option pairs with values below
-      petsc_options_value = 'hypre boomeramg'
     []
 
 
@@ -110,4 +107,4 @@ Paraview
 
 The output should be as follow:
 
-![outputs_03](03_outputs.png)
+![outputs_03](media/03_outputs.png)

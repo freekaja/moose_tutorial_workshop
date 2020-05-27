@@ -24,3 +24,6 @@ Inside MOOSE, a huge number of physics modules is available for end users to sta
   * Phase Field
   * Porous Flow
   * Tensor Mechanics
+
+
+This tutorial serves to provide a quick intro to the capabilities of MOOSE from a end user perspective, and ways that scientists/engineers can quickly dive into MOOSE.
