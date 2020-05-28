@@ -8,6 +8,15 @@ Typically Workflow of MOOSE are as follow:
 3. Construct or apply objects from MOOSE
 3. Post processing
 
+# Problem Descriptions:
+
+We will be performing a steady state diffusion related problem using MOOSE, represented using the following:
+
+![equ](https://latex.codecogs.com/gif.latex?-\nabla\cdot&space;\nabla&space;u&space;=&space;0&space;\in&space;\Omega)
+
+
+
+
 # Pre-processing
 
 During this step, the goal is to construct the suitable geometries. MOOSE accepts a variety of inputs geometry files from various applications (Exodus from Sandia, ANSYS, ACIS), Exodus serves the most support files type in using MOOSE
