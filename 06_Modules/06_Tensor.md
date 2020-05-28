@@ -75,7 +75,7 @@ Running `06_Tensor.i` gives us a `disp` variable in the result:
 ![outputs_06_heat](media/06_tensor.png)
 
 
-However, visualizing displacement is usually not useful since we are usually more interested in other properties such as axial stress or effective strain, which are some scalar computations of the tensor itself. Therefore we will make use of MOOSE auxillery system. To calculate some scalar components, we will use `RankTwoScalarAux ` and calculate the Axial Stress in the z direction. 
+However, visualizing displacement is usually not useful since we are usually more interested in other properties such as axial stress or effective strain, which are some scalar computations of the tensor itself. Therefore we will make use of MOOSE auxillery system. To calculate some scalar components, we will use `RankTwoScalarAux ` and calculate the Axial Stress in the z direction.
 
     [AuxVariables]
       [./Axial_Stress]
