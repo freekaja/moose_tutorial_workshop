@@ -16,6 +16,10 @@
     type = Diffusion
     variable = diffused
   [../]
+  [./time]
+    type = TimeDerivative
+    variable = diffused
+  [../]
 []
 
 [BCs]
@@ -35,8 +39,10 @@
 []
 
 [Executioner]
-  type = Steady
+  type = Transient
   solve_type = 'Newton'
+  num_steps = 20
+  dt = 1
 []
 
 [Outputs]
