@@ -23,6 +23,7 @@ MacOS:
 
     curl -L -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh bash Miniconda3-latest-MacOSX-x86_64.sh -b -p ~/miniconda3
 
+*Note: If you just install miniconda/anaconda, open a new terminal before continuing*
 
 ##### 2. Append the following line to the PATH parameters:
 
