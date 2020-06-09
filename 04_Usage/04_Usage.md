@@ -135,7 +135,7 @@ The result should be as follow:
        [../]
      []
 
-In additions, we also change our Exuect
+In additions, we also change our executioner to transient and added termination conditions.
 
     [Executioner]
       type = Transient
@@ -143,3 +143,7 @@ In additions, we also change our Exuect
       num_steps = 20
       dt = 1
     []
+
+The result should be as such:
+
+![outputs_04](media/04_transient.gif) 
