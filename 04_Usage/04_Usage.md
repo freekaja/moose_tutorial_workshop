@@ -110,25 +110,36 @@ In the sample input file, we applied DirichletBC on both top and bottom to creat
 
 #### [Executioner]
 
-Executioner block dictates the method we will be using to solve. There are typically two types of executioner: `Steady` or `Transient`. Secondary, we can choose the `solver_type`, i.e. `Newton`, `PFJNK`, 'FD', 'Linear'. For `Transient`, we also must states end conditions such as `dt`, or `num_steps`.
+Executioner block dictates the method we will be using to solve. There are typically two types of executioner: `Steady` or `Transient`. Secondary, we can choose the `solver_type`, i.e. `Newton`, `PFJNK`, `FD`, `Linear`. For `Transient`, we also must states end conditions such as `dt`, or `num_steps`. We will be using a steady state solver with Newton solver.
 
     [Executioner]
       type = Steady
       solve_type = 'Newton'
     []
 
-We will be using a steady state solver with Newton solver. I also included a example of `Transient` solver below:
-
-    [Executioner]
-      type = Transient
-      solve_type = 'PFJNK'
-
-      start_time = 0.0
-      dt = 1
-      end_time = 10
-    []
-
 
 The result should be as follow:
 
 ![outputs_04](media/04_mug.png)
+
+ However, we want to obseve our simulations varies in time, and therefore we have to use the `Transient` solver which calculates the residual at every time steps. To change our code to transient, we have to included a new kernel block for time derivative.
+
+     [Kernels]
+       [./diff]
+         type = Diffusion
+         variable = diffused
+       [../]
+       [./time]
+         type = TimeDerivative
+         variable = diffused
+       [../]
+     []
+
+In additions, we also change our Exuect
+
+    [Executioner]
+      type = Transient
+      solve_type = 'Newton'
+      num_steps = 20
+      dt = 1
+    []
